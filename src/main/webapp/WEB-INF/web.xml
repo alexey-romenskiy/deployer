@@ -1,0 +1,66 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+    <listener>
+        <listener-class>codes.writeonce.deployer.ApplicationListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>trackServlet</servlet-name>
+        <servlet-class>codes.writeonce.deployer.TrackServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>trackServlet</servlet-name>
+        <url-pattern>/api/track</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>environmentsServlet</servlet-name>
+        <url-pattern>/api/environments</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>artifactsServlet</servlet-name>
+        <url-pattern>/api/artifacts</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>deploymentServlet</servlet-name>
+        <url-pattern>/api/deployment</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>deploymentsServlet</servlet-name>
+        <url-pattern>/api/deployments</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>newDeploymentServlet</servlet-name>
+        <url-pattern>/api/deployment/new</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>editDeploymentServlet</servlet-name>
+        <url-pattern>/api/deployment/edit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>cancelDeploymentServlet</servlet-name>
+        <url-pattern>/api/deployment/cancel</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>signoffDeploymentServlet</servlet-name>
+        <url-pattern>/api/deployment/signoff</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>performDeploymentServlet</servlet-name>
+        <url-pattern>/api/deployment/perform</url-pattern>
+    </servlet-mapping>
+
+</web-app>

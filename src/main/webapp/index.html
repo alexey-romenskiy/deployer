@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js" type="application/javascript"></script>
+    <script type="application/javascript">
+        $(function () {
+            $("#submit").on("click", function (event) {
+                $.post({
+                    url: "api/info",
+                    data: JSON.stringify({
+                        zipcode: 97201
+                    }),
+                    contentType: 'application/json',
+                    dataType: "json"
+                }).done(function (json) {
+                    alert(json.home);
+                }).fail(function (xhr, status, errorThrown) {
+                    alert(status);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="submit">Submit</button>
+</body>
+</html>
